@@ -1,26 +1,41 @@
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<section class="p-6 h-screen gradient-form bg-gray-200 md:h-screen">
+  <div class="container-fluid m-2 h-full">
+    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div class="xl:w-10/12">
+        <div class="block bg-white shadow-lg rounded-lg">
+          <div class="lg:flex lg:flex-wrap g-0">
+            <div class="lg:w-6/12 px-4 md:px-0">
+              <div class="md:p-12 md:mx-6">
+                <div class="text-center">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+                  <%= image_tag("hhlogo2.png",
+                      :class => "mx-auto w-40 rounded-md",
+                      :alt => "Our Logo") %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+                  <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">The Service Desk Team</h4>
+                </div>
+                <%= render 'shared/forms/login_form' %>
+              </div>
+            </div>
+            <div
+              class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none"
+              style="
+                background: linear-gradient(to right, #d5b155, #8494a1, #1d3a51);
+              "
+            >
+              <div class="text-white px-4 py-6 md:p-12 md:mx-6">
+                <h4 class="text-xl font-semibold mb-6">Log back into your marketplace account</h4>
+                <p class="text-sm">
+                  If only it were so simple! If only there were evil people somewhere insidiously committing evil deeds, and it were necessary
+                  only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every
+                  human being. And who is willing to destroy a piece of his own heart?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
