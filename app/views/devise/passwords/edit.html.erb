@@ -1,25 +1,40 @@
-<h2>Change your password</h2>
+<section class="p-6 h-screen gradient-form bg-gray-200 md:h-screen">
+  <div class="container-fluid m-2 h-full">
+    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div class="xl:w-10/12">
+        <div class="block bg-white shadow-lg rounded-lg">
+          <div class="lg:flex lg:flex-wrap g-0">
+            <div class="lg:w-6/12 px-4 md:px-0">
+              <div class="md:p-12 md:mx-6">
+                <div class="text-center">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
+                  <%= image_tag("hhlogo2.png",
+                      :class => "mx-auto w-40 rounded-md",
+                      :alt => "Our Logo") %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+                  <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">Password Edit</h4>
+                </div>
+                <%= render 'shared/forms/password_edit_form' %>
+              </div>
+            </div>
+            <div
+              class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none"
+              style="
+                background: linear-gradient(to right, #d5b155, #8494a1, #1d3a51);
+              "
+            >
+              <div class="text-white px-4 py-6 md:p-12 md:mx-6">
+                <h4 class="text-xl font-semibold mb-6">Edit you account's password</h4>
+                <p class="text-sm">
+                  Use this form to edit your existing marketplace password
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

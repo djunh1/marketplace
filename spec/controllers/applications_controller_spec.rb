@@ -14,7 +14,7 @@ RSpec.describe "routes for app", type: :routing do
             action: "destroy"
           )
     end
-    it "routes /register to the devise sessions controller" do
+    it "routes /register to the devise registrations controller" do
         expect(:get => "/register").to route_to(
             :controller => "devise/registrations",
             action: "new"
