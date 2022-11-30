@@ -1,0 +1,117 @@
+@import "abstracts/variables.scss";
+
+
+.form-custom {
+    height: 4rem;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 5px !important;
+    padding: .65rem 1rem .65rem 2rem !important;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 !important;
+    background-color: #fff !important;
+    color: $color-primary !important;
+    width: 100%;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    ;
+    box-sizing: border-box !important;
+    ;
+
+    &:focus {
+        border: 1px solid $color-primary-dark !important;
+        box-shadow: 0 0 0 0;
+    }
+
+    &::placeholder {
+        color: $color-primary !important;
+    }
+
+    &--textbox {
+        height: 15rem !important;
+        resize: none;
+        padding: .65rem 1rem .65rem 2rem !important;
+        border-radius: 5px !important;
+        border: 1px solid $color-grey-dark-2;
+        font-size: 1.8rem;
+
+    }
+}
+
+
+.form-marketplace-auth {
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        height: 4rem;
+        border: 1px solid #d0d0d0 !important;
+        border-radius: 5px !important;
+        padding: .65rem 1rem .65rem 2rem !important;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 0 !important;
+        background-color: #fff !important;
+        color: $color-primary !important;
+        width: 100%;
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        ;
+        box-sizing: border-box !important;
+        ;
+
+        &:focus {
+            border: 1px solid $color-primary-dark !important;
+            box-shadow: 0 0 0 0;
+        }
+
+        &::placeholder {
+            color: $color-primary !important;
+        }
+    }
+
+    &__text-area {
+        height: 15rem !important;
+    }
+
+    &__remember-me {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    &__checkbox {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        flex-basis: 50%;
+    }
+
+    &__forget-password {
+        flex-basis: 50%;
+        justify-content: flex-end;
+        display: flex;
+        transform: translateY(1rem);
+
+        &link {
+            justify-content: flex-end;
+        }
+
+    }
+}
+
+// For input items with icon
+.form-group-marketplace-auth {
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+    }
+}

@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg", "1.4.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -41,6 +41,8 @@ gem "redis", "~> 4.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+gem 'dotenv', '~> 2.8', '>= 2.8.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -78,3 +80,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Added Gems
+gem 'inline_svg'
+gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'petergate', '~> 3.0'
