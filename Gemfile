@@ -84,3 +84,4 @@ end
 # Added Gems
 gem 'inline_svg'
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'petergate', '~> 3.0'
