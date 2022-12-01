@@ -9,9 +9,7 @@ module Admin
     before_action :authenticate_admin
     before_action :authenticate_user!
 
-    access all: [], user: [] , site_admin: :all
-    "Unavailable.  Please contact site administrator."
-
+    access all: [], user: [] , site_admin: :all,  message: "Forbidden."
 
     def authenticate_admin
       # TODO Add authentication logic here.
