@@ -85,3 +85,4 @@ end
 gem 'inline_svg'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'petergate', '~> 3.0'
+gem 'administrate', '~> 0.18.0'

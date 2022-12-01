@@ -21,4 +21,11 @@ RSpec.describe "routes for app", type: :routing do
           )
     end
 
+    it "routes /market_place_admin to the administrate controller" do
+        expect(:get => "/market_place_admin").to route_to(
+            :controller => "admin/users",
+            action: "index"
+          )
+    end
+
 end
