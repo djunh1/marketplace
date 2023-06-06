@@ -8,15 +8,21 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,300i,400,400i,600,700" rel="stylesheet">
 
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    
+
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless @disable_nav %>
+    <% if (current_user.is_a?(GuestUser)) %>
+      <%= render 'shared/navigation/navbar_guest' unless @disable_nav %>
+    <% else %>
+      <%= render 'shared/navigation/navbar_user' unless @disable_nav %>
+    <% end %>
+
+
     <main>
 
        <!-- Devise notifications -->

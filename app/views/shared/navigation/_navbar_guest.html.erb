@@ -1,0 +1,68 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+  <%= link_to image_tag("hhlogo-small.png",
+                      :class => "navbar-item",
+                      :alt => "Navigation Logo"), home_path, class: "navbar-brand" %>
+
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+
+    </div>
+
+    <div class="navbar-end">
+          <a class="navbar-item">
+        About <%= @company_name%>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About Us
+          </a>
+          <a class="navbar-item">
+            Signing up
+          </a>
+
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Reaching out
+          </a>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <div class="buttons">
+          <%= link_to "Log in", new_user_session_path, class: "button btn-outline-primary" %></li>
+          <%= link_to "Sign up", new_user_registration_path, class: "button btn-outline-primary" %></li>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+
+});
+</script>

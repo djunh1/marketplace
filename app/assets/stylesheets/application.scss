@@ -1,4 +1,6 @@
 // Imporant - SCSS in this file will take presidence over the tailwind CSS framework
+@import "bulma";
+
 @import "abstracts/variables.scss";
 @import "abstracts/mixins.scss";
 
@@ -9,6 +11,7 @@
 // Resable Components
 @import "components/forms.scss";
 @import "components/buttons.scss";
+@import "components/navbar.scss";
 
 
 // Individual Web pages

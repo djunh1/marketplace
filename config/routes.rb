@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admin, path: 'market_place_admin' do 
+  namespace :admin, path: 'market_place_admin' do
       resources :users
       resources :guest_users
 
@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   get '/main' => 'pages#landing_page'
   get '/home' => 'pages#home'
+  get '/about' => 'pages#home'
+
+
 end

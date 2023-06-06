@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 
     def set_variables
         #Set these for application wide values.
-         @company_name = "The Desk (TM, LLC, PLLC, Esquire, CMT, Dr etc)"
+         @company_name = "Gametime"
     end
 end
